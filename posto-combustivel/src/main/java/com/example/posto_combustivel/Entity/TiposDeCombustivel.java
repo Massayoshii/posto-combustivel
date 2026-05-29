@@ -3,6 +3,8 @@ package com.example.posto_combustivel.Entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "tipos_de_combustivel")
 @Getter
@@ -18,6 +20,6 @@ public class TiposDeCombustivel {
     @Column(name = "nome")
     private String nome;
     @Column(name = "preco_por_litro")
-    private double precoPorLitro;
+    private BigDecimal precoPorLitro;
 
 }

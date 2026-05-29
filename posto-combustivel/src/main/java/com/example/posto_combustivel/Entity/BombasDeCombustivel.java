@@ -1,0 +1,23 @@
+package com.example.posto_combustivel.Entity;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+@Entity
+@Table(name = "bombas_de_combustivel")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class BombasDeCombustivel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "nome")
+    private String nome;
+    @ManyToOne
+    @JoinColumn(name = "combustivel_id")
+    private TiposDeCombustivel tiposDeCombustivel;
+}

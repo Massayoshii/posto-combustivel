@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/abastecimento")
+@RequestMapping("/tiposDeCombustivel")
 
 public class TiposDeCombustivelController {
     private final TipoDeCombustivelService tipoDeCombustivelService;

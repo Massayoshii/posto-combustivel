@@ -30,9 +30,9 @@ public class TipoDeCombustivelService {
         tipoDeCombustivelRepository.deleteById(id);
     }
 
-    public void alterarTipoDeCombustivel(Long id){
-        TiposDeCombustivel combustivel = buscarTipoDeCombustivelPorId(id);
-        combustivel.setId(combustivel.getId());
-        tipoDeCombustivelRepository.save(combustivel);
+    public void alterarTipoDeCombustivel(Long id , TiposDeCombustivel tiposDeCombustivel){
+        TiposDeCombustivel bomba = buscarTipoDeCombustivelPorId(id);
+        tiposDeCombustivel.setId(bomba.getId());
+        tipoDeCombustivelRepository.save(bomba);
     }
 }

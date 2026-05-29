@@ -3,6 +3,7 @@ package com.example.posto_combustivel.Entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
@@ -24,7 +25,7 @@ public class Abastecimento {
     @Column(name = "data_abastecimento")
     private LocalDate dataAbastecimento;
     @Column(name = "valor_total")
-    private double valorTotal;
+    private BigDecimal valorTotal;
     @Column(name = "quantidade_litros")
     private double quantidadeLitros;
 }
